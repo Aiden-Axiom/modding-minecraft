@@ -1,1 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Modding Program</title>
+    <link rel="icon" href="https://cdn2.steamgriddb.com/icon_thumb/374d37146f8e631a2adb03fd6818b497.png">
+</head>
+<body>
+    <div id="splash" class="opening">
+        <img src="minecraft.svg" alt="Minecraft Logo">
+    </div>
 
+    <div class="project">
+        <img src="https://styles.redditmedia.com/t5_2yqte/styles/communityIcon_si8ncejl6yg91.png">
+        <div class="credits">
+            <h1>Optifine</h1>
+            <p>Works with 1.21.4</p>
+            <a href="mods/OptiFine_1.21.4_HD_U_J3.jar">
+                <button>Download</button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="topbar">
+        <img onclick="openMinecraft()" style="width: 150px; cursor: pointer;" src="minecraft.svg" alt="Minecraft Logo">
+        <a href="#docs">Browse</a>
+        <a href="#docs">Shop</a>
+        <div class="search">
+            <input placeholder="Search"> 
+            <a href="#docs">Search</a>
+        </div>
+        
+        <a href="#docs">Browse</a>
+    </div>
+
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            overflow-x: hidden;
+            background-color: #333;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        button {
+            background-color: transparent;
+            border: 1px solid white;
+            padding: 10px;
+            border-radius: 15000px;
+            color: white;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .project {
+            background-color: #444;
+            padding: 15px;
+            border-radius: 15px;
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .project img {
+            border-radius: 15px;
+            width: 150px;
+        }
+
+        .credits {
+            padding: 15px;
+        }
+
+        input {
+            background-color: #555;
+            color: white;
+            outline: none;
+            padding: 5px;
+            border: none;
+            border-radius: 15000px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        input:focus, input:hover {
+            background-color: #666;
+        }
+
+        .topbar {
+            background-color: #444;
+            padding: 15px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .topbar a {
+            color: white;
+            text-decoration: none;
+            background-color: #555;
+            padding: 5px;
+            border-radius: 15000px;
+        }
+
+        .topbar a:hover {
+            background-color: #666;
+        }
+
+        .opening {
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s ease;
+            pointer-events: all;
+            z-index: 15000;
+        }
+
+        .opening img {
+            width: 1000px;
+        }
+    </style>
+
+    <script>
+        function start() {
+            setTimeout(function () {
+                document.getElementById('splash').style.opacity = "0";
+                document.getElementById('splash').style.pointerEvents = "none";
+            }, 1000);
+        }
+
+        function openMinecraft() {
+            window.location.href = "https://www.minecraft.net/en-us";
+        }
+
+        start();
+    </script>
+</body>
+</html>
